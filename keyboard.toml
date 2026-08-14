@@ -12,8 +12,8 @@ usb_enable = false
 [matrix]
 # Matrix pins are required.
 # Note: esp32h2 exposes GPIO0-15 and GPIO22-27 (GPIO16-21 don't exist)
-row_pins = ["GPIO6", "GPIO7", "GPIO10", "GPIO11"]
-col_pins = ["GPIO3", "GPIO4", "GPIO5"]
+row_pins = ["GPIO2", "GPIO3", "GPIO4", "GPIO5"]
+col_pins = ["GPIO12", "GPIO11", "GPIO10"]
 
 # Default diode direction is col2row; set `row2col = true` if needed.
 # row2col = true
