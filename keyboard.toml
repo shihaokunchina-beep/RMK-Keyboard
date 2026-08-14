@@ -24,16 +24,16 @@ cols = 3
 layers = 2
 keymap = [
     [
-        ["A", "B", "C"],
-        ["User0", "User1", "User2"],
-        ["LCtrl", "User5", "LShift"],
-        ["DF(1)", "Kc1", "DF(0)"]
+        ["Kc7", "Kc8", "Kc9"],
+        ["Kc4", "Kc5", "Kc6"],
+        ["Kcl", "Kc2", "Kc3"],
+        ["MO(1)", "Kc0", "Enter"]
     ],
     [
-        ["Kp7", "Kp8", "Kp9"],
-        ["Kp4", "Kp5", "Kp6"],
-        ["Kp1", "Kp2", "Kp3"],
-        ["_", "Kp0", "_"]
+        ["User0", "User1", "User2"],
+        ["LCtrl", "User5", "RCtrl"],
+        ["LGui", "Space", "RGui"],
+        ["_", "_", "_"]
     ],
 ]
 
@@ -52,4 +52,12 @@ keymap = [
 enabled = true
 
 [ble]
-enabled = true
+enabled = true[ble]
+# Enable or disable passkey entry (default: false)
+# When disabled, passkey pairing requests from the host are automatically rejected.
+passkey_entry = true
+# Timeout in seconds for passkey entry (default: 120, minimum: 30)
+# If the user does not finish entering the passkey within this time, pairing is cancelled.
+# Setting this below 30 will cause a build error.
+passkey_entry_timeout = 120
+
