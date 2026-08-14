@@ -1,4 +1,4 @@
-# esp32c3 BLE example
+# esp32h2 BLE example
 
 To run this example, you should have latest Rust installed. The full instruction of installing esp Rust toolchain can be found [here](https://docs.esp-rs.org/book/installation/index.html).
 
@@ -11,7 +11,7 @@ cargo install cargo-espflash espflash
 After having everything installed, use the following command to run the example:
 
 ```
-cd examples/use_config/esp32c3_ble
+cd examples/use_config/esp32h2_ble
 cargo run --release
 ```
 
@@ -23,14 +23,14 @@ cargo run --release
     ...
     ...
     Finished `release` profile [optimized + debuginfo] target(s) in 11.70s
-     Running `espflash flash --monitor --port /dev/cu.usbmodem211401 target/riscv32imc-unknown-none-elf/release/rmk-esp32c3`
+     Running `espflash flash --monitor --port /dev/cu.usbmodem211401 target/riscv32imac-unknown-none-elf/release/rmk-esp32h2`
 [2025-04-10T10:01:23Z INFO ] Serial port: '/dev/cu.usbmodem211401'
 [2025-04-10T10:01:23Z INFO ] Connecting...
 [2025-04-10T10:01:23Z INFO ] Using flash stub
-Chip type:         esp32c3 (revision v0.1)
-Crystal frequency: 40 MHz
+Chip type:         esp32h2 (revision v0.1)
+Crystal frequency: 32 MHz
 Flash size:        4MB
-Features:          WiFi 6, BT 5
+Features:          BLE 5, IEEE 802.15.4
 MAC address:       40:4c:ca:5b:c7:dc
 App/part. size:    768,944/4,128,768 bytes, 18.62%
 [2025-04-10T10:01:23Z INFO ] Segment at address '0x0' has not changed, skipping write
@@ -61,5 +61,5 @@ If you want to get some insight of segments of your binary, [`espsegs`](https://
 cargo install --git https://github.com/bjoernQ/espsegs
 
 # Check all segments
-espsegs target/riscv32imc-unknown-none-elf/release/rmk-esp32c3 --chip esp32c3
+espsegs target/riscv32imac-unknown-none-elf/release/rmk-esp32h2 --chip esp32h2
 ```
