@@ -6,12 +6,13 @@ product_name = "RMK Keyboard"
 vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "haobo"
-chip = "esp32c3"
+chip = "esp32h2"
 usb_enable = false
 
 [matrix]
 # Matrix pins are required.
-row_pins = ["GPIO6", "GPIO7", "GPIO20", "GPIO21"]
+# Note: esp32h2 exposes GPIO0-15 and GPIO22-27 (GPIO16-21 don't exist)
+row_pins = ["GPIO6", "GPIO7", "GPIO10", "GPIO11"]
 col_pins = ["GPIO3", "GPIO4", "GPIO5"]
 
 # Default diode direction is col2row; set `row2col = true` if needed.
