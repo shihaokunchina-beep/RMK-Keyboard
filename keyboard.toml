@@ -53,11 +53,4 @@ enabled = true
 
 [ble]
 enabled = true
-# Enable or disable passkey entry (default: false)
-# When disabled, passkey pairing requests from the host are automatically rejected.
-passkey_entry = true
-# Timeout in seconds for passkey entry (default: 120, minimum: 30)
-# If the user does not finish entering the passkey within this time, pairing is cancelled.
-# Setting this below 30 will cause a build error.
-passkey_entry_timeout = 120
 
