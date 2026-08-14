@@ -26,7 +26,7 @@ keymap = [
     [
         ["Kc7", "Kc8", "Kc9"],
         ["Kc4", "Kc5", "Kc6"],
-        ["Kcl", "Kc2", "Kc3"],
+        ["Kc1", "Kc2", "Kc3"],
         ["MO(1)", "Kc0", "Enter"]
     ],
     [
