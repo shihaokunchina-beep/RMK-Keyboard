@@ -52,7 +52,7 @@ keymap = [
 enabled = true
 
 [ble]
-enabled = true[ble]
+enabled = true
 # Enable or disable passkey entry (default: false)
 # When disabled, passkey pairing requests from the host are automatically rejected.
 passkey_entry = true
