@@ -20,10 +20,10 @@ jobs:
       - name: Install cargo-binstall (used by other steps if needed)
         uses: cargo-bins/cargo-binstall@main
 
-      # Install rmkit from the rmk-v0.8.2 tag (build from source so it includes new rmk-config)
-      - name: Build & install rmkit from rmk-v0.8.2
+      # Build & install rmkit from its release so rmkit binary matches rmk config expectations
+      - name: Build & install rmkit from v0.0.21
         run: |
-          git clone --branch rmk-v0.8.2 https://github.com/rmk-rs/rmkit rmkit-src
+          git clone --branch v0.0.21 https://github.com/rmk-rs/rmkit rmkit-src
           cd rmkit-src
           cargo install --path . --locked --force
           cd ..
@@ -56,7 +56,7 @@ jobs:
           echo "prefix=$PREFIX" >> "$GITHUB_OUTPUT"
 
       # Install other tools and build as upstream does
-      - name: Install rmkit, flip-link and cargo-make
+      - name: Install cargo-make and flip-link
         run: cargo binstall cargo-make flip-link -y
 
       - name: Install esp toolchain (esp32s3 / Xtensa)
@@ -114,5 +114,3 @@ jobs:
         with:
           name: ${{ steps.prefix.outputs.prefix }}${{ steps.project.outputs.project_name }}-firmware
           path: rmk/*
-
-      
